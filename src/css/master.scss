@@ -1,9 +1,14 @@
 @import "variables";
 
-html {
-    body {
-        font-size: 100%;
-        background: $bgcolor;
-    }
+* {
+  box-sizing: border-box;
 }
 
+global:html {
+    font-size: 100%;
+}
+
+.HelloBox {
+    font-size: 100%;
+    border: 1px solid gray;
+}
