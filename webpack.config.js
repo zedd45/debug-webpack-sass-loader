@@ -19,17 +19,23 @@ module.exports = {
             {
                 test: /\.scss$/,
                 include: /src/,
-                // loader: ExtractTextPlugin.extract(
-                //   'style',
-                //   'css?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-                //   'sass?sourceMap'
-                // )
+
+                // we want to use css-modules with Sass (with sourcemaps):
+                // https://github.com/gajus/react-css-modules#sass-scss-less-and-other-css-preprocessors
+
                 loaders: [
-                  'style',
-                  'css',
-                  'autoprefixer?browsers=last 3 versions',
-                  'sass?outputStyle=expanded'
+                    'style?sourceMap',
+                    'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+                    'resolve-url',
+                    'sass?sourceMap'
                 ]
+
+                // loaders: [
+                //   'style',
+                //   'css',
+                //   'autoprefixer?browsers=last 3 versions',
+                //   'sass?outputStyle=expanded'
+                // ]
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
