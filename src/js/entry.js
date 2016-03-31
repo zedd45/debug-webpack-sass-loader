@@ -1,7 +1,7 @@
 
-// Import CSS
+// Import _global_ CSS
 import '../css/master.scss';
-import '../css/sublfolder/another-file.scss';
+
 
 // Import React and JS
 import HelloBox from './HelloBox';

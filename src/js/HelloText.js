@@ -1,7 +1,7 @@
-// Import React
 import React from 'react';
+import styles from '../css/subfolder/another-file.scss';
 
-// Create class called HelloText that extends the base React Component class
+
 export default class HelloText extends React.Component {
 
     constructor(props) {
@@ -11,6 +11,6 @@ export default class HelloText extends React.Component {
 
     render() {
 
-        return (<p>Hello, {this.props.name}!</p>);
+        return (<p className={styles.Square}>Hello, {this.props.name}!</p>);
     }
 }
